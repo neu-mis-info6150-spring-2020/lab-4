@@ -1,0 +1,54 @@
+@import "mixin";
+
+.container {
+    position: static;
+    width: 1000px;
+    height: 2000px;
+    /* margin: auto; */
+    background-color: rgba(36, 36, 36, 0.2);
+    padding: 20px;
+}
+
+.box {
+    @include rounded-border(10px);
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    background-color: rgba(36, 36, 36, 0.2);
+}
+.relative::after {
+    content: "Relative";
+    padding: 20px;
+}
+.absolute::after {
+    content: "Absolute";
+    padding: 20px;
+}
+.fixed::after {
+    content: "Fixed";
+    padding: 20px;
+}
+.sticky::after {
+    content: "Sticky";
+    padding: 20px;
+}
+
+.relative {
+    position: relative;
+    left: 170px;
+}
+.absolute {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+.sticky {
+    position: sticky;
+    top: 10px;
+    left: 10px;
+}
